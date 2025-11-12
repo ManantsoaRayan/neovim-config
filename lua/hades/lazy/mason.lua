@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 return {
 	{
 		"williamboman/mason.nvim",
@@ -11,7 +12,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "pyright" },
+				ensure_installed = { "lua_ls", "pyright"},
 				automatic_installation = false,
 				handlers = {
 					function(server_name)
