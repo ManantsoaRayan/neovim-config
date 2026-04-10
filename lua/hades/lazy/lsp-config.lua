@@ -1,6 +1,7 @@
 return {
   "neovim/nvim-lspconfig",
-  dependencies = { "hrsh7th/nvim-cmp",
+  dependencies = {
+    "hrsh7th/nvim-cmp",
     "hrsh7th/cmp-nvim-lsp",
     "williamboman/mason.nvim", "williamboman/mason-lspconfig.nvim",
     "L3MON4D3/LuaSnip",
@@ -28,7 +29,6 @@ return {
       desc = "LSP actions",
       callback = function(event)
         local opts = { buffer = event.buf }
-
         vim.keymap.set('n', '<leader>K', '<cmd>lua vim.lsp.buf.hover()<cr>', opts)
         vim.keymap.set('n', '<leader>gd', '<cmd>lua vim.lsp.buf.definition()<cr>', opts)
         vim.keymap.set('n', '<leader>gD', '<cmd>lua vim.lsp.buf.declaration()<cr>', opts)
@@ -66,4 +66,5 @@ return {
       },
     })
   end
+
 }
